@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <title>Weather App</title>
+    <meta charset="utf-8" />
+  </head>
+<body>
+<h1></h1>
+<div class="container">
+    <fieldset>
+        <form action="/" method="post">
+            <input name="city" type="text" class="city" placeholder="Please Enter A City">
+            <br>
+            <input name="temperature" type="text" class="temp" ><br>
+            <input type="submit" class="submit-button" value="Get Temperature"><br>
+        </form>
+       
+            <div class="temperature">
+              <p>
+                <%= city %>
+              </p>
+            </div>
+        
+        
+    </fieldset>
+</div>
+</body>
+</html>
