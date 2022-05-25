@@ -6,22 +6,16 @@
 <body>
 <h1></h1>
 <div class="container">
-    <fieldset>
+    
         <form action="/" method="post">
-            <input name="city" type="text" class="city" placeholder="Please Enter A City">
+            <input name="cities" type="text" class="city" placeholder="Please Enter A City">
             <br>
-            <input name="temperature" type="text" class="temp" ><br>
             <input type="submit" class="submit-button" value="Get Temperature"><br>
         </form>
        
-            <div class="temperature">
-              <p>
-                <%= city %>
-              </p>
-            </div>
-        
-        
-    </fieldset>
+        <% if (city_data) {%>
+          <h2><%= city_data %></h2>
+        <%} %>
 </div>
 </body>
 </html>
