@@ -13,8 +13,7 @@ var city_data = {};
 
 
 app.get('/', function(req, res) {
-	console.log("req quesru",req.query);
-	res.render("index", {  city_data: {},temp:null ,error: null });
+	res.render("index", {  city_data: "",temp:null ,error: null });
 })
 
 app.post('/', function(req, res) {
@@ -39,6 +38,7 @@ app.post('/', function(req, res) {
 			
 			if(Object.keys(city_data).length == Object.keys(cities).length) {
 				console.log("tempreture: ",city_data);
+				city_data = JSON.stringify(city_data);
 				res.render("index", { city_data: city_data});
 			}
 		})
